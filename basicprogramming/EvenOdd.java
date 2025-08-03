@@ -2,18 +2,23 @@ package basicprogramming;
 import  java.util.*;
 
 public class EvenOdd {
-    static String evenOdd(int n){
-        String status="";
+    static boolean  evenOdd(int n){
+        
         if(n%2 == 0)
-            status= "Even";
-        else status="Odd";
+            return true;
+        else return false;
 
-        return status;
+        
     }
-    public static void main(String[] args){
+    public static void main(String[] args)throws InputMismatchException{
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        System.out.println("The entered number "+ num +" is: "+evenOdd(num));
+        if(evenOdd(num)){
+            System.out.println("The entered number "+ num +" is: Even ");
+        }
+        else{
+            System.out.println("The entered number "+ num +" is: Odd");
+        }
     }
     
 }
